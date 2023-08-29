@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1450">
+    <title>PIECE of LUCK : 로그인</title>
+    <!--파비콘-->
+    <link rel="shortcut icon" href="./img/favicon.png" type="image/x-icon">
+    <!--Pretendard-->
+    <link rel="stylesheet" href="./fonts/stylesheet.css">
+    <!--aos-->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!--index_1 css-->
+    <link rel="stylesheet" href="./css/index_1.css">
+</head>
+<body>
+    <div id="container">
+        <div class="background_" data-aos="fade-down" data-aos-delay="100">
+            <div class="back">
+                <div class="background">
+                    <div class="logo">
+                        <h1>
+                            <a href="./index.html">
+                                <img src="./img/LOGO.png" alt="PIECE of LUCK" width="300px">
+                            </a>
+                        </h1>
+                    </div>
+                    <div class="login-wrapper">
+                        <h2>LOGIN</h2>
+                        <form method="post" action="#" id="login-form">
+                            <input type="text" name="userName" placeholder="아이디">
+                            <input type="password" name="userPassword" placeholder="비밀번호">
+                            <div class="check-id__container">
+                                <input id="check-id" type="checkbox" />
+                                <label for="check-id"><span class="check-id__checkbox"></span>로그인 상태 유지</label>
+                            </div>
+                            <input type="submit" value="로그인" class="login">
+                            <div class="direction__container">
+                                <p class="sign-up">Don't have an account? <a href="./index.html">Sign up</a></p>
+                            </div>
+                            <div class="img">
+                                <img src="./img/login_kring.png" alt="kring" width="250px">
+                            </div><!--img-->
+                        </form>
+                    </div>
+                    <p class="right">
+                        <a href="#">비밀번호 찾기</a> l
+                        <a href="#">아이디찾기</a> l
+                        <a href="#">회원가입</a>
+                    </p>
+                    <div id="banner">
+                        <a href="./index.html">
+                          <img name="randomImage">  
+                        </a>
+                    </div>
+                    <p class="left">
+                        <a href="#">이용약관</a> l
+                        <a href="#">개인정보처리방침</a> l
+                        <a href="#">책임의 한계와 법적고지</a> l
+                        <a href="#">회원정보 고객센터</a>
+                    </p>
+                    <p class="center">
+                        <a href="./index.html">
+                            <img src="./img/LOGO.png" alt="PIECE of LUCK" width="100px">
+                        </a>
+                        Copyright <span>&#169; PIECE of LUCK Corp.</span> All Rights Reserved
+                    </p>
+                </div><!--background-->
+            </div><!--back-->
+        </div><!--background_-->
+        <div id="position">
+            <img src="./img/login_beeb_kring.png" alt="" width="500px"  class="img_beeb">
+            <img src="./img/login_bag.png" alt="" width="100px" id="img_bag">
+            <img src="./img/login_beeb_ground.png" alt="" width="650px" class="img_beeb_ground">
+            <img src="./img/login_orange.png" alt="" width="100px" class="orange">
+            <img src="./img/login_sand.png" alt="" width="100px" class="sand"> 
+        </div>
+        <div class="img_slide"></div>
+    </div><!--container-->
+    
+
+
+
+
+    <script language="javascript">
+        function random_img(){
+        num=Math.floor(Math.random()*8);//다섯개 이상의 파일을 출력하려면 5를 해당숫자로 수정.
+        document.randomImage.src="img/main_banner_"+num+".jpg";
+        }
+    </script>
+    <script>
+        random_img(); //위의 이미지태그 아래쪽에 반드시 추가
+    </script>
+
+    <!--aos-->
+    <script>
+        AOS.init();
+    </script>
+
+
+
+    <!--애니메이션 중첩-->
+    <script>
+        img_bag.animate(
+  { transform: ["rotate(3deg)", "rotate(-5deg)"] },
+  {
+    duration: 500,
+    direction: "alternate",
+    iterations: Infinity,
+    composite: "add" // *** this is the important line
+  }
+);
+img_bag.animate(
+  { transform: ["translateY(0px)", "translateY(-20px)", "translateY(0px)"] },
+  {
+    duration: 1500,
+    iterations: Infinity,
+    direction: "alternate",
+    composite: "add" // *** this is the important line
+  }
+);
+    </script>
+</body>
+</html>
