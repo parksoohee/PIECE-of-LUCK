@@ -1,0 +1,327 @@
+@charset "utf-8";
+/*양진체*/
+@font-face {
+    font-family: 'yangjin';
+    src: url('https://cdn.jsdelivr.net/gh/supernovice-lab/font@0.9/yangjin.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+/*프리텐다드
+font-family: 'Pretendard';*/
+
+
+*{margin: 0; padding: 0;}
+img, video, iframe{
+    vertical-align: middle;
+}
+ol, ul{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: #2d2d2d;
+}
+img, video{
+    max-width: 100%;
+}
+html{
+    scroll-behavior: smooth;
+}
+body, html {
+    cursor: url(../img/cursor.cur), auto
+}
+a {
+    cursor: url(../img/cursor.cur), auto
+}
+body{
+    font-family: 'Pretendard';
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+    color: #2d2d2d;
+    min-width:1450px;
+    background: #79d9fc url(../img/login_footer.png) no-repeat center bottom;
+    position: relative;
+    overflow-y: hidden;
+}
+#container{
+    width: 1320px;
+    margin: 0 auto;
+}
+#position{
+    width: 500px;
+    float: right;
+    position: relative;
+}
+@keyframes move1{
+    0%{
+        transform: translateY(0);
+    }
+    50%{
+        transform: translateY(-20px);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
+@keyframes lotate{
+    0%{
+        transform: rotate(5deg);
+    }
+    100%{
+        transform: rotate(-5deg);
+    }
+}
+.img_beeb{
+    position: absolute;
+    top: 317px;
+    right: -23px;
+    z-index: 10;
+    animation: move1 1.5s linear infinite ;
+}
+#img_bag{
+    position: absolute;
+    top: 447px;
+    right: 452px;
+    transform-origin: right top;
+}
+.img_beeb_ground{
+    position: absolute;
+    top: 415px;
+    right: -10px;
+    z-index: 8;
+}
+@keyframes movement {
+    0% {
+      background-position: 6000px 0px;
+      /*배경이미지 길이만큼 설정합니다!*/
+    }
+
+    100% {
+      background-position: 0px 0px;
+    }
+}
+.img_slide{
+    width: 100%;
+    height: 475px;
+    background: url(../img/login_slide.png) repeat-x left top;
+    overflow: hidden;
+    background-size: auto 475px;
+    animation: movement 50s linear infinite;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.orange{
+    position: absolute;
+    top: 593px;
+    right: 152px;
+    z-index: 9;
+    animation: lotate 0.5s linear infinite alternate;
+}
+.sand{
+    position: absolute;
+    top: 625px;
+    right: 245px;
+    z-index: 9;
+    animation: lotate 0.5s linear infinite alternate;
+}
+.logo{
+    width: 400px;
+    padding: 70px 0 150px;
+    margin: 0 auto;
+    text-align: center;
+}
+.background_{
+    position: relative;
+    z-index: 10;
+    float: left;
+    height:100vh;
+}
+.back{
+    width: 660px;
+    margin: 0 auto;
+    background: url(../img/login_background.png) repeat-y;
+    height: 100vh;
+}
+.background{
+    width: 600px;
+    text-align: center;
+    margin: 0 auto;
+    background: #fff;
+    height: 100vh;
+    overflow-y: scroll;
+}
+/* 아래의 모든 코드는 영역::코드로 사용 */
+.background::-webkit-scrollbar {
+    width: 10px;  /* 스크롤바의 너비 */
+}
+  
+.background::-webkit-scrollbar-thumb {
+    height: 20%; /* 스크롤바의 길이 */
+    background: rgba(46, 186, 113,0.7); /* 스크롤바의 색상 */
+    border-radius: 100px;
+    border: 5px solid rgba(0, 0, 0, 0.18);
+    border-left: 0;
+    border-right: 0;
+}
+  
+.background::-webkit-scrollbar-track {
+    background: rgba(46, 186, 113,0.0);
+    border-radius: 100px;
+    /*스크롤바 뒷 배경 색상*/
+}
+.login-wrapper{
+    width: 430px;
+    padding: 30px 40px 20px 40px;
+    box-sizing: border-box;
+    margin: 0 auto;
+    background-color: #fff;
+    border: 2px solid #2eba71;
+    border-radius: 10px;
+    box-shadow:0 0 10px rgba(46, 186, 113,0.4);
+    position: relative;
+}
+.login-wrapper > h2{
+    font-size: 25px;
+    color: #2eba71;
+    margin-top: 5px;
+    margin-bottom: 20px;
+    font-family: 'yangjin';
+    font-weight: normal;
+    text-align: center;
+}
+.img{
+    position: absolute;
+    top: -149px; 
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+}
+#login-form > input{
+    width: 100%;
+    height: 48px;
+    padding: 0 10px;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+    border-radius: 6px;
+    background-color: #fff;
+    border: 1px solid #CBD75B;
+    font-size: 16px;
+}
+#login-form input:focus {
+    border:1px solid #2eba71;
+    box-shadow:0 0 10px rgba(46, 186, 113,0.4);
+    outline: none;
+}
+#login-form input:focus::placeholder{
+    color: #2eba71;
+}
+#login-form > input::placeholder{
+    color: #D2D2D2;
+}
+#login-form > input[type="submit"]{
+    color: #fff;
+    font-size: 16px;
+    background-color: #2eba71;
+    margin-top: 15px;
+    border: none;
+}
+#login-form > input[type="submit"]:hover{
+    background-color: #FF7340;
+    box-shadow:0 0 10px rgba(255, 115, 64,0.8);
+    transition: all 0.5s;
+}
+/*기존의 checkbox를 없애고 label를 이용하여  디자인 시안과 동일하게 변경시켜줍니다.*/
+
+.check-id__container input[type='checkbox'] {
+    display: none;
+}
+#login-form > label{
+    color: #999999;
+}
+.check-id__container {
+    color: #7a7a7a;
+}
+.check-id__container input[type='checkbox'] + label span {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background: url(../img/checkbox.png);
+    cursor: url(../img/cursor.cur), auto;
+    margin-right: 6px;
+}
+.check-id__container input[type='checkbox']:checked + label span {
+    background-color: #2eba71;
+    background: url(../img/checkbox_.png);
+}
+.check-id__container label {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    cursor: url(../img/cursor.cur), auto;
+    transition: all 0.3s;
+}
+.check-id__container:hover label{
+    color: #2eba71;
+    font-weight: 700;
+    transition: all 0.3s;
+}
+/*direction*/
+.direction__container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.direction__container p {
+    text-align: center;
+    color: #B2B2B2;
+}
+.direction__container a{
+    color: #2eba71;
+    font-weight: 700;
+    transition: all 0.5s;
+}
+.direction__container a:hover{
+    font-size: 16px;
+    transition: all 0.5s;
+}
+.right a{
+    padding: 0 10px;
+    color: #B2B2B2;
+    transition: all 0.5s;
+}
+.right a:hover{
+    color: #2eba71;
+    transition: all 0.5s;
+}
+.right{
+    text-align: center;
+    padding: 20px 0;
+    color: #B2B2B2;
+}
+#banner img{
+    max-width: 430px;
+}
+#banner{
+    box-sizing: border-box;
+    padding: 15px 0 50px;
+}
+.left{
+    text-align: center;
+    color: #B2B2B2;
+}
+.left a{
+    color: #B2B2B2;
+}
+.center{
+    align-items: center;
+    text-align: center;
+    font-size: 12px;
+    color: #B2B2B2;
+}
+.center span{
+    color: #2d2d2d;
+}
