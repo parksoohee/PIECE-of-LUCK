@@ -1005,24 +1005,29 @@ h1>span{
     font-size: 20px;
     color: #2eba71;
 }
-.popup{
+.popup1, .popup2{
     width: 400px;
-    height: 540px;
     box-shadow: 2px 2px 8px rgba(0,0,0,0.2);
+    background-color: #2d2d2d;
+    text-align: right;
+}
+.popup1 p, .popup2 p{
+    padding: 5px;
+}
+.close, .close_{
+    font-size: 14px;
+    cursor: url(../img/cursor.cur);
+    color: #fff;
+}
+.popup1{
     position: fixed;
     top: 15%;
     left: 15%;
-    background-color: #2d2d2d;
-    z-index: 99999999999999999;
+    z-index: 100;
 }
-.popup p{
-    color: #fff;
-    font-size: 20px;
-    font-weight: 700;
-    text-align: right;
-    box-sizing: border-box;
-    padding: 5px;
-}
-.close{
-    width: 30px;
+.popup2{
+    position: fixed;
+    top: 20%;
+    left: 30%;
+    z-index: 110;
 }
