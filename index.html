@@ -645,12 +645,18 @@
         </div><!--top_in-->
       </div><!--top-->
     </div><!--footer-->
-    <div class="popup">
+    <div class="popup1">
       <img src="./img/popup_page1.jpg" alt="event">
       <p>
-        <img src="./img/close.png" alt=""  class="close">
+        <span class="close">[ CLOSE ]</span>
       </p>
   </div><!--popup-->
+  <div class="popup2">
+    <img src="./img/popup_page2.jpg" alt="event">
+    <p>
+      <span class="close_">[ CLOSE ]</span>
+    </p>
+</div><!--popup-->
 
 
 <!--top_event_banner--> 
@@ -725,14 +731,27 @@
       freeMode: true,
     });
   </script>
-  <!--팝업페이지-->
+
+
+
+  <!--팝업페이지1-->
   <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
   <script>
       $(function(){
           /*.more_btn a를 클릭하면 .popup이 나타난다.
           .close를 클릭하면 .popup이 사라진다.*/
           $(".close").click(function(){
-              $(".popup").hide();
+              $(".popup1").hide();
+          });
+      });
+  </script>
+  <!--팝업페이지2-->
+  <script>
+      $(function(){
+          /*.more_btn a를 클릭하면 .popup이 나타난다.
+          .close를 클릭하면 .popup이 사라진다.*/
+          $(".close_").click(function(){
+              $(".popup2").hide();
           });
       });
   </script>
