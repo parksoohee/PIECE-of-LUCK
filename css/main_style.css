@@ -379,7 +379,7 @@ h1>span{
 
 #together{
     background: url(../img/main_bg_fixed.jpg) no-repeat center center fixed;
-    background-size: 100%;
+    background-size: cover;
     height: 400px;
     margin: 200px 0 0;
     display: flex;
