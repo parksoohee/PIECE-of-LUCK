@@ -312,9 +312,7 @@ header>h1{
 
 
 /*tab1*/
-.tab_container{
-    overflow-x: hidden;
-}
+
 #tab1 #title{
     background: url(../img/sub_banner1.png) no-repeat center center;
     width: 100%;
